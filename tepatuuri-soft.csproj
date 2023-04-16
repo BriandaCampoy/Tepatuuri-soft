@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{686A1307-35A0-4B46-87EA-C74B022457B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tepatuuri_soft</RootNamespace>
+    <AssemblyName>tepatuuri-soft</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONEXION.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmAddProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmAddProductos.Designer.cs">
+      <DependentUpon>frmAddProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmFormularioPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmFormularioPedido.Designer.cs">
+      <DependentUpon>frmFormularioPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmInsumo.Designer.cs">
+      <DependentUpon>frmInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmPedidos.Designer.cs">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSeleccionarMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSeleccionarMes.Designer.cs">
+      <DependentUpon>frmSeleccionarMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="origen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="origen.Designer.cs">
+      <DependentUpon>origen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmInvInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmInvInsumo.Designer.cs">
+      <DependentUpon>frmInvInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmReportInvProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmReportInvProductos.Designer.cs">
+      <DependentUpon>frmReportInvProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmReportListClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmReportListClientes.Designer.cs">
+      <DependentUpon>frmReportListClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmReportListProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmReportListProveedores.Designer.cs">
+      <DependentUpon>frmReportListProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmReportPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmReportPedido.Designer.cs">
+      <DependentUpon>frmReportPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\frmReportReStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\frmReportReStock.Designer.cs">
+      <DependentUpon>frmReportReStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEPANTURIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEPANTURIDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmAddProductos.resx">
+      <DependentUpon>frmAddProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmFormularioPedido.resx">
+      <DependentUpon>frmFormularioPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmInsumo.resx">
+      <DependentUpon>frmInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmPedidos.resx">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSeleccionarMes.resx">
+      <DependentUpon>frmSeleccionarMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="origen.resx">
+      <DependentUpon>origen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reports\frmInvInsumo.resx">
+      <DependentUpon>frmInvInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\frmReportInvProductos.resx">
+      <DependentUpon>frmReportInvProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\frmReportListClientes.resx">
+      <DependentUpon>frmReportListClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\frmReportListProveedores.resx">
+      <DependentUpon>frmReportListProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\frmReportPedido.resx">
+      <DependentUpon>frmReportPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\frmReportReStock.resx">
+      <DependentUpon>frmReportReStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReporInvProductos.rdlc" />
+    <EmbeddedResource Include="reports\ReportListProveedores.rdlc" />
+    <EmbeddedResource Include="reports\ReportInvInsumo.rdlc" />
+    <EmbeddedResource Include="reports\ReportListClientes.rdlc" />
+    <EmbeddedResource Include="reports\ReportPedidosdlc.rdlc" />
+    <EmbeddedResource Include="reports\ReportReStock.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TEPANTURIDataSet.xsc">
+      <DependentUpon>TEPANTURIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TEPANTURIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TEPANTURIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TEPANTURIDataSet.xss">
+      <DependentUpon>TEPANTURIDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="reports\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="reports\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reports\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\semana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semana1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semana2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo tepatuuri mini.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoy.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
